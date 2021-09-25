@@ -1,0 +1,38 @@
+{
+  "name": "hackathon-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "handlebars": "^4.7.7",
+    "nanoclone": "^0.2.1",
+    "property-expr": "^2.0.4",
+    "regenerator-runtime": "^0.13.9",
+    "source-map": "^0.6.1",
+    "toposort": "^2.0.2",
+    "tsc": "^2.0.3",
+    "uglify-js": "^3.14.2",
+    "wordwrap": "^1.0.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node build/server",
+    "dev": "nodemon src/server.ts",
+    "build": "rm -rf build/ && prettier --write src/ && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexwathever/hackathon-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexwathever/hackathon-server/issues"
+  },
+  "homepage": "https://github.com/alexwathever/hackathon-server#readme"
+}
