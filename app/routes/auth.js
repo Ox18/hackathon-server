@@ -6,9 +6,6 @@ const requireAuth = passport.authenticate('jwt', {
   session: false
 })
 const trimRequest = require('trim-request')
-const origin = require('../middleware/utils/origin')
-
-
 
 const {
   register,
@@ -35,9 +32,7 @@ const {
 /*
  * Register route
  */
-router.post('/register', 
-origin.checkDomain,
-origin.checkTenant,
+router.post('/register',
 trimRequest.all, validateRegister, register)
 
 /*
@@ -61,8 +56,6 @@ router.post('/reset', trimRequest.all, validateResetPassword, resetPassword)
 router.get(
   '/token',
   requireAuth,
-  origin.checkDomain,
-  origin.checkTenant,
   roleAuthorization(['admin','admin_int','manager','inspector']),
   trimRequest.all,
   getRefreshToken
@@ -73,9 +66,7 @@ router.get(
  */
 router.post(
   '/login', 
-  trimRequest.all, 
-  origin.checkDomain,
-  origin.checkTenant,
+  trimRequest.all,
   validateLogin, 
   login)
 

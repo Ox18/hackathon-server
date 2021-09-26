@@ -57,6 +57,9 @@ i18n.configure({
 })
 app.use(i18n.init)
 // Init all other stuff
+app.use(fileUpload({
+  useTempFiles: false,
+}));
 app.use(cors())
 app.use(passport.initialize())
 app.use(compression())

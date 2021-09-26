@@ -33,10 +33,10 @@ const UserSchema = new mongoose.Schema(
     web_page: {
       type: String
     },
-    repository: {
+    github: {
       type: String
     },
-    linkedln: {
+    linkedin: {
       type: String
     },
     verification: {
@@ -55,8 +55,11 @@ const UserSchema = new mongoose.Schema(
     country: {
       type: String
     },
-    img: {
+    about: {
       type: String
+    },
+    avatar: {
+      type: Object
     },
     loginAttempts: {
       type: Number,
