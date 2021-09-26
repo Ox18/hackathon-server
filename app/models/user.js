@@ -25,10 +25,19 @@ const UserSchema = new mongoose.Schema(
       required: true,
       select: false
     },
-    role: {
+    type: {
       type: String,
-      enum: ['admin','user'],
+      enum: ['company','user'],
       default: 'user'
+    },
+    web_page: {
+      type: String
+    },
+    repository: {
+      type: String
+    },
+    linkedln: {
+      type: String
     },
     verification: {
       type: String
@@ -43,18 +52,11 @@ const UserSchema = new mongoose.Schema(
     phone: {
       type: String
     },
-    city: {
-      type: String
-    },
     country: {
       type: String
     },
     img: {
       type: String
-    },
-    pipedrive_id: {
-      type: String,
-      required: false
     },
     loginAttempts: {
       type: Number,
